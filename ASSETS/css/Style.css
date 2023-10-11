@@ -255,36 +255,65 @@ nav ul li a:hover{
 }
 /* ------------------------PROJECTS SECTION----------------------------- */
 #projects{
-    width: 100%;
-    height: 100vh;
     padding: 100px;
 }
-.project_container{
-    overflow: initial;
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
 }
-.project_content{
-    padding: 0 1.5rem;
-}
-.project_img{
-    width: 300px;
+.works{
+    position: relative;
     border-radius: 4rem;
-    justify-self: center;
+    overflow: hidden;
+    padding-bottom: 150px;
 }
-.project_description{
-    margin-bottom: 5px;
+.works img{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    border-radius: 4rem;
+    display: block;
+    transition: transform 0.5s;
 }
-.project_btn{
-    padding: 8px 16px;
-    display: inline-block;
-    text-decoration: none;
-    background: var(--primary);
-    border-radius: 30px;
-    color: var(--background);
-    font-weight: var(--font-semi-bold);
+.works:hover img{
+    transform: scale(1.1);
 }
-.project_btn:hover{
-    background: var(--text);
-    transform: translateX(.25rem);
+.work-info{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #807679);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+    color: white;
+}
+.works:hover .work-info{
+    height: 100%;
+}
+.work-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+.work-info a{
+    margin-top: 20px;
+    font-size: 25px;
+    color: white;
+}
+.work-info a:hover{
+    color: rgb(183, 29, 29);
 }
 
 /* -----------------------CONTACT SECTION---------------------------- */
@@ -436,7 +465,7 @@ h1 span{
         opacity: 1;
     }
 }
-@keyframes slideLeft{ /* for headertext socialmedia*/
+@keyframes slideLeft{ /* for socialmedia*/
     0%{
         transform: translateX(100px);
         opacity: 0;
@@ -447,66 +476,3 @@ h1 span{
     }
 }
 
-
-/* =================MY WORKS============ */
-#projects{
-    padding: 100px;
-}
-.work-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-top: 50px;
-}
-.works{
-    position: relative;
-    border-radius: 4rem;
-    overflow: hidden;
-    padding-bottom: 150px;
-}
-.works img{
-    /* border: 1px solid red; */
-    width: 100%;
-    height: 100%;
-    border-radius: 4rem;
-    display: block;
-    transition: transform 0.5s;
-}
-.works:hover img{
-    transform: scale(1.1);
-}
-.work-info{
-    width: 100%;
-    height: 0%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #807679);
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: column;
-    text-align: center;
-    padding: 0 40px;
-    transition: height 0.5s;
-    color: white;
-}
-.works:hover .work-info{
-    height: 100%;
-}
-.work-btn{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 0;
-}
-.work-info a{
-    margin-top: 20px;
-    font-size: 25px;
-    color: white;
-}
-.work-info a:hover{
-    color: rgb(183, 29, 29);
-}
