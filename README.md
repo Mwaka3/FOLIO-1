@@ -1,3 +1,3 @@
-# Simple Portfolio
+# Avery Simple Portfolio
 
 HTML/CSS/JS
