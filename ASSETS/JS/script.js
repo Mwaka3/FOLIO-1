@@ -1,6 +1,6 @@
 /* -----------HOME PAGE------------- */
 var typed = new Typed(".multiple-text", {
-    strings: ["Front End Developer", "Technical Support Engineer", "QA Engineer"],
+    strings: ["Front End Developer", "QA Engineer"],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
